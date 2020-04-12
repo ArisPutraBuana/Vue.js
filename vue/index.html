@@ -4,15 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue JS (ke-3)</title>
+    <title>Vue JS (ke-4)</title>
 </head>
 
 <body>
-    <div id="app" v-html='message'>
-    </div>
-
-    <!-- <div id="app" v-text='message'>
+    <!-- <div id="app">
+        <p v-if="show">{{ message }}</p>
     </div> -->
+
+    <!-- <div id="app">
+        <p v-if="show">{{ message }}</p>
+    </div> -->
+
+    <!-- <div id="app">
+        <p v-if="!show">{{ message }}</p>   => lihat ( !show ) 
+    </div> -->
+
+    <!-- <div id="app">
+        <p v-if="show == 'ready' ">{{ message }}</p>
+    </div> -->
+
+    <div id="app">
+        <p v-if="show">{{ message }}</p>
+        <p v-else="show">{{ message2 }}</p>
+    </div>
 
     <!-- Pemanggilan file vue js -->
     <script src="assets/vendor/vue.js"></script>
