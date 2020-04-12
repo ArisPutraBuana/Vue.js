@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue JS (ke-2)</title>
+    <title>Vue JS (ke-3)</title>
 </head>
 
 <body>
-    <div id="app">
-        <p>{{ message }}</p>
+    <div id="app" v-html='message'>
     </div>
+
+    <!-- <div id="app" v-text='message'>
+    </div> -->
 
     <!-- Pemanggilan file vue js -->
     <script src="assets/vendor/vue.js"></script>
