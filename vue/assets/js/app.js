@@ -1,6 +1,6 @@
-new Vue({
-    el: '#app',
-    data: {
-        message: 'Hello Word'
-    }
-})
+var app = new Vue({
+  el: "#app",
+  data: {
+    message: "Hello Aris Putra Buana",
+  },
+});
