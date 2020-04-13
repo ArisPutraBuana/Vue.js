@@ -1,37 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS (ke-5)</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue JS (ke-4)</title>
-</head>
-
-<body>
-    <!-- <div id="app">
-        <p v-if="show">{{ message }}</p>
-    </div> -->
-
-    <!-- <div id="app">
-        <p v-if="show">{{ message }}</p>
-    </div> -->
-
-    <!-- <div id="app">
-        <p v-if="!show">{{ message }}</p>   => lihat ( !show ) 
-    </div> -->
-
-    <!-- <div id="app">
-        <p v-if="show == 'ready' ">{{ message }}</p>
-    </div> -->
-
+  <body>
     <div id="app">
-        <p v-if="show">{{ message }}</p>
-        <p v-else="show">{{ message2 }}</p>
+      <p>Penambahan {{ int1 }} + {{ int2 }} menghasilkan {{ tambah }}</p>
+      <p>Perkalihan {{ int1 }} * {{ int2 }} menghasilkan {{ kali }}</p>
+      <p>Pengurangan {{ int1 }} - {{ int2 }} menghasilkan {{ kurang }}</p>
+      <p>Pembagian {{ int1 }} / {{ int2 }} menghasilkan {{ bagi }}</p>
     </div>
 
     <!-- Pemanggilan file vue js -->
     <script src="assets/vendor/vue.js"></script>
     <script src="assets/js/app.js"></script>
-</body>
-
+  </body>
 </html>
