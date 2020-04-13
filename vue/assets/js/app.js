@@ -1,23 +1,18 @@
 var app = new Vue({
   el: "#app",
   data: {
-    message: ''
+    content: '',
+    vehicles: ['Motor', 'Mobil', 'Kareta Api']
   },
   methods: {
-    escKey: function () {
-      this.message = 'You pressing esc key'
+    addVehicle: function () {
+      // push = digunakan untuk TAMBAH
+      this.vehicles.push(this.content);
+      this.content = '';
     },
-    spaceKey: function () {
-      this.message = 'You pressing space key'
-    },
-    upKey: function () {
-      this.message = 'You pressing up key'
-    },
-    downKey: function () {
-      this.message = 'You pressing down key'
-    },
-    aKey: function () {
-      this.message = 'You pressing alphabet "a" key'
-    },
+    removeVehicle: function (index) {
+      // splice = digunakan untuk HAPUS
+      this.vehicles.splice(index, 1);
+    }
   }
 });
