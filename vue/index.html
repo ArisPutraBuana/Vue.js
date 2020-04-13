@@ -3,21 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue JS (ke-13)</title>
+    <title>Vue JS (ke-14)</title>
   </head>
 
   <body>
     <br />
     <br />
     <div id="app">
-      <!-- v-bind:src="imgFile" =====> biasanya SRC aja kalau di HTML, lihat di file app.js -->
-      <img v-bind:src="imgFile" alt="Elektronik" width="600" height="300" />
       <br />
-      <!-- href="https://goole.com" =====> biasanya HREF aja kalau di HTML, lihat di file app.js -->
-      <a v-bind:href="link">Google</a>
       <br />
-      <!-- v-bind:style="styleFont" =====> biasanya STYLE aja kalau di HTML, lihat di file app.js -->
-      <p v-bind:style="styleFont">Red Font</p>
+      <br />
+
+      <!-- (v-on:click) sama aja (@:click) -->
+      <button
+        v-on:click="message = 'the button has been clicked using v-on:click!'"
+      >
+        Click
+      </button>
+      <button @click="message = 'the button has been clicked using @click!'">
+        Click Me!
+      </button>
+      <button @click="showAlert">Show Alert!</button>
+      <br />
+      {{ message }}
     </div>
 
     <!-- Pemanggilan file vue js -->
