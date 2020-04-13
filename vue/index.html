@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue JS (ke-8)</title>
+    <title>Vue JS (ke-9)</title>
   </head>
 
   <body>
     <br />
     <br />
     <div id="app">
-      <!-- Input String dan lihat hasilnya akan muncul secara Realtime -->
-      <input type="text" v-model="message" /><br /><br />
-      {{ message }}
+      <!-- Inputkan sebuah String dan lihat hasilnya akan muncul secara Realtime -->
+      <textarea cols="30" rows="10" v-model="textarea"></textarea>
+      <br /><br />
+      <!-- style="white-space: pre-line;" ==> agar ketika di enter membuat garis baru -->
+      <p style="white-space: pre-line;">{{ textarea }}</p>
     </div>
 
     <!-- Pemanggilan file vue js -->
