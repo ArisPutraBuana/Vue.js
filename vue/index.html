@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue JS (ke-7)</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vue JS (ke-6)</title>
-</head>
+  <body>
+    <br /><br />
+    <div id="app">
+      <input type="text" v-model="kilometers" />
+      <!-- Jika di input 1 -->
+      <input type="text" v-model="meters" />
+      <!-- Akan muncul 1000 -->
+    </div>
 
-<body>
-  <div id="app">
-    <!-- <button v-on:click="sumProcess">Klik</button>
-    <p>Result {{ int1 }} + {{ int2 }} menghasilkan {{ result }}</p> -->
-
-    <button v-on:click="sumProcess(2)">Klik</button>
-    <p>Result menghasilkan {{ result }}</p>
-  </div>
-
-  <!-- Pemanggilan file vue js -->
-  <script src="assets/vendor/vue.js"></script>
-  <script src="assets/js/app.js"></script>
-</body>
-
+    <!-- Pemanggilan file vue js -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>

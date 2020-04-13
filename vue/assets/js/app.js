@@ -1,16 +1,17 @@
 var app = new Vue({
   el: "#app",
   data: {
-    int1: 5,
-    int2: 3,
-    result: null,
+    kilometers: 0,
+    meters: 0
   },
-  methods: {
-    // sumProcess: function () {
-    // return (this.result = this.int2 + this.int1);
-
-    sumProcess: function (int3) {
-      return (this.result = this.int2 + this.int1 + int3);
+  watch: {
+    kilometers: function (val) {
+      this.kilometers = val;
+      this.meters = val * 1000;
     },
-  },
+    meters: function (val) {
+      this.kilometers = val / 1000;
+      this.meters = val;
+    }
+  }
 });
