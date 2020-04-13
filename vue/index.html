@@ -3,37 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue JS (ke-12)</title>
+    <title>Vue JS (ke-13)</title>
   </head>
 
   <body>
     <br />
     <br />
     <div id="app">
-      <!-- Choice Your Favorite Programming Language :
-      <select v-model="select">
-        <option value="" disabled>Choice Programming Language</option>
-        <option value="javascript">JavaScript</option>
-        <option value="java">Java</option>
-        <option value="C#">C#</option>
-      </select>
+      <!-- v-bind:src="imgFile" =====> biasanya SRC aja kalau di HTML, lihat di file app.js -->
+      <img v-bind:src="imgFile" alt="Elektronik" width="600" height="300" />
       <br />
-      <p>Your Favorite Programming Language is : <b>{{ select }}</b></p> -->
-
-      Choice Your Favorite Programming Language :
-      <!-- Menambahkan atribut MULTIPLE => agar bisa memilih lebih dari satu, saat memilih tekan CTRL untuk pilih lebih dari satu -->
-      <select v-model="select" multiple>
-        <option value="" disabled>Choice Programming Language</option>
-        <option value="javascript">JavaScript</option>
-        <option value="java">Java</option>
-        <option value="C#">C#</option>
-      </select>
+      <!-- href="https://goole.com" =====> biasanya HREF aja kalau di HTML, lihat di file app.js -->
+      <a v-bind:href="link">Google</a>
       <br />
-      <p>Your Favorite Programming Language is : {{ select }}</p>
-      <ul>
-        <!-- Melakukan perulangan -->
-        <li v-for="sel in select">{{ sel }}</li>
-      </ul>
+      <!-- v-bind:style="styleFont" =====> biasanya STYLE aja kalau di HTML, lihat di file app.js -->
+      <p v-bind:style="styleFont">Red Font</p>
     </div>
 
     <!-- Pemanggilan file vue js -->
