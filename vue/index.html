@@ -3,26 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue JS (ke-11)</title>
+    <title>Vue JS (ke-12)</title>
   </head>
 
   <body>
     <br />
     <br />
     <div id="app">
-      <!-- Silakan pilih beberapa Checkbox (Memilih Hobby) -->
-      <label for="">Catur</label>
-      <input type="checkbox" value="catur" v-model="checkbox" /><br />
-      <label for="">Bola Basket</label>
-      <input type="checkbox" value="bola-basket" v-model="checkbox" /><br />
-      <label for="">Membaca</label>
-      <input type="checkbox" value="membaca" v-model="checkbox" /><br /><br />
-      <!-- Tampilan Hobby yg sudah dipilih -->
-      <p>Hobby Saya adalah :</p>
+      <!-- Choice Your Favorite Programming Language :
+      <select v-model="select">
+        <option value="" disabled>Choice Programming Language</option>
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="C#">C#</option>
+      </select>
       <br />
+      <p>Your Favorite Programming Language is : <b>{{ select }}</b></p> -->
+
+      Choice Your Favorite Programming Language :
+      <!-- Menambahkan atribut MULTIPLE => agar bisa memilih lebih dari satu, saat memilih tekan CTRL untuk pilih lebih dari satu -->
+      <select v-model="select" multiple>
+        <option value="" disabled>Choice Programming Language</option>
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="C#">C#</option>
+      </select>
+      <br />
+      <p>Your Favorite Programming Language is : {{ select }}</p>
       <ul>
-        <!-- Melakukan perulangan, CHECK(rownya) adalah nama kecil dari CHECKBOX(resultnya) -->
-        <li v-for="check in checkbox">{{ check }}</li>
+        <!-- Melakukan perulangan -->
+        <li v-for="sel in select">{{ sel }}</li>
       </ul>
     </div>
 
