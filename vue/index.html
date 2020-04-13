@@ -3,19 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue JS (ke-10)</title>
+    <title>Vue JS (ke-11)</title>
   </head>
 
   <body>
     <br />
     <br />
     <div id="app">
-      <!-- Silakan pilih salah satu Radio button -->
-      <input type="radio" v-model="radiobutton" value="Laki-laki" />Laki-laki
+      <!-- Silakan pilih beberapa Checkbox (Memilih Hobby) -->
+      <label for="">Catur</label>
+      <input type="checkbox" value="catur" v-model="checkbox" /><br />
+      <label for="">Bola Basket</label>
+      <input type="checkbox" value="bola-basket" v-model="checkbox" /><br />
+      <label for="">Membaca</label>
+      <input type="checkbox" value="membaca" v-model="checkbox" /><br /><br />
+      <!-- Tampilan Hobby yg sudah dipilih -->
+      <p>Hobby Saya adalah :</p>
       <br />
-      <input type="radio" v-model="radiobutton" value="Perempuan" />Perempuan
-      <br />
-      <p>Jenis Kelamin Anda : {{ radiobutton }}</p>
+      <ul>
+        <!-- Melakukan perulangan, CHECK(rownya) adalah nama kecil dari CHECKBOX(resultnya) -->
+        <li v-for="check in checkbox">{{ check }}</li>
+      </ul>
     </div>
 
     <!-- Pemanggilan file vue js -->
