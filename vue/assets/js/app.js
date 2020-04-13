@@ -1,18 +1,26 @@
 var app = new Vue({
   el: "#app",
   data: {
-    content: '',
-    vehicles: ['Motor', 'Mobil', 'Kareta Api']
-  },
-  methods: {
-    addVehicle: function () {
-      // push = digunakan untuk TAMBAH
-      this.vehicles.push(this.content);
-      this.content = '';
-    },
-    removeVehicle: function (index) {
-      // splice = digunakan untuk HAPUS
-      this.vehicles.splice(index, 1);
+    vehicles: [{
+        type: 'Car',
+        brand: 'Toyota',
+        color: 'Metallic Silver'
+      },
+      {
+        type: 'Motocycle',
+        brand: 'Honda',
+        color: 'Red'
+      },
+      {
+        type: 'Bike',
+        brand: 'BMX',
+        color: 'Black'
+      }
+    ],
+    object: {
+      firstName: 'Aris',
+      lastName: 'Putra Buana',
+      age: 23
     }
   }
 });
