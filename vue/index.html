@@ -3,18 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue JS (ke-19)</title>
+    <title>Vue JS (ke-20)</title>
   </head>
 
   <body>
     <br />
     <br />
     <div id="app">
-      <br />
-      <br />
-      <br />
-      <!-- Click aja -->
-      <button-counter></button-counter>
+      <blog-post v-for="post in posts" :key="post.id" :post="post"> </blog-post>
     </div>
 
     <!-- Pemanggilan file vue js -->
