@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue JS (ke-14)</title>
+    <title>Vue JS (ke-15)</title>
   </head>
 
   <body>
@@ -13,17 +13,23 @@
       <br />
       <br />
       <br />
-
-      <!-- (v-on:click) sama aja (@:click) -->
-      <button
-        v-on:click="message = 'the button has been clicked using v-on:click!'"
-      >
-        Click
-      </button>
-      <button @click="message = 'the button has been clicked using @click!'">
-        Click Me!
-      </button>
-      <button @click="showAlert">Show Alert!</button>
+      <!--  ( v-on:keyup.enter ) sama saja ( @keyup.enter ) -->
+      <label for="">Press Enter Key</label>
+      <input
+        type="text"
+        v-on:keyup.enter="message = 'You pressing enter key'"
+      />
+      <br />
+      <label for="">Press Any Key</label>
+      <!-- @keyup.65="aKey" => 65 adalah Code ASC -->
+      <input
+        type="text"
+        @keyup.esc="escKey"
+        @keyup.space="spaceKey"
+        @keyup.up="upKey"
+        @keyup.down="downKey"
+        @keyup.65="aKey"
+      />
       <br />
       {{ message }}
     </div>
